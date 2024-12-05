@@ -1,0 +1,144 @@
+/* General Styles */
+.todolist {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Warna latar belakang halaman */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-image: url('/images/14.jpg'); /* Ganti dengan URL gambar Anda */
+    background-size: cover; /* Agar gambar menutupi seluruh container */
+    background-position: center; /* Memposisikan gambar di tengah */
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Agar halaman mengambil setidaknya tinggi layar penuh */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Navbar Styling */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Background navbar dengan transparansi */
+    z-index: 9999;
+}
+
+/* Container */
+.index2 {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.495);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Header */
+h1 {
+    font-size: 2.5rem;
+    color: #343a40;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Button Styles */
+button {
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+button.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+button.btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+button.btn-danger:hover {
+    background-color: #a71d2a;
+}
+
+button.btn-success {
+    background-color: #28a745;
+    color: #fff;
+}
+
+button.btn-success:hover {
+    background-color: #1e7e34;
+}
+
+/* List Styles */
+.list-group {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list-group-item {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.list-group-item:hover {
+    background-color: #f1f1f1;
+}
+
+/* Completed task style */
+.completed {
+    text-decoration: line-through;
+    color: #6c757d;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-top: 30px;
+}
+
+/* Card Styles */
+.card {
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #343a40;
+}
+
+.text-decoration-line-through {
+    text-decoration: line-through;
+    color: #6c757d !important;
+}
+

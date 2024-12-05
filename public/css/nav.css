@@ -1,0 +1,134 @@
+/* Navbar */
+.navbar {
+    background: linear-gradient(90deg, #0022ff, #ffffff, #0022ff);
+    background-size: 200% 200%;
+    animation: navbarGradient 5s ease infinite;
+    padding: 0.8rem 1.5rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', sans-serif; /* Set a clean, modern font */
+}
+
+@keyframes navbarGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.navbar-brand {
+    color: #000000;
+    font-size: 1.8rem; /* Increased font size for better visibility */
+    font-weight: 700; /* Bold font weight for a stronger presence */
+    letter-spacing: 1px; /* Adds some spacing between letters for a refined look */
+}
+
+.navbar-toggler {
+    border-color: #ffffff;
+}
+
+.nav-link {
+    color: #000000 !important;
+    font-size: 1.1rem; /* Slightly larger font size for better readability */
+    font-weight: 500; /* Medium font weight for balanced contrast */
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+    display: inline-block;
+    text-align: center;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    margin: 0 0.5rem;
+    line-height: 1.5; /* Improve line spacing for better readability */
+    text-transform: uppercase; /* Uppercase text for a more professional look */
+}
+
+.nav-link:hover {
+    color: #ffffff !important; /* Change text color on hover for better contrast */
+    background-color: #006aff;
+    border-color: #006aff; /* Adds border color matching the background */
+}
+
+.nav-item {
+    margin-right: 1rem;
+}
+
+.navbar-nav {
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+/* Menambahkan margin auto untuk logout ke kanan */
+.nav-item.logout {
+    margin-left: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+    .navbar {
+        padding: 0.5rem 1rem;
+    }
+
+    .navbar-nav {
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .nav-item {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    .navbar-toggler {
+        border-color: #ffffff;
+    }
+}
+
+.navbar-nav .nav-item:last-child {
+    margin-right: 0;
+}
+
+.navbar-bottom {
+  background-color: #f8f9fa;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.navbar-bottom .navbar-text {
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+/* Footer Styles */
+footer.bg-dark {
+    background: linear-gradient(90deg, #0022ff, #ffffff, #0022ff);
+    background-size: 200% 200%;
+    animation: navbarGradient 5s ease infinite;
+    color: #ffffff; /* Teks putih untuk kontras */
+    padding: 1rem 0; /* Jarak vertikal */
+    margin-top: auto; /* Agar footer tetap di bawah */
+}
+
+footer.bg-dark .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer.bg-dark .text-center {
+    text-align: center;
+}
+
+footer.bg-dark p {
+    margin: 0;
+    font-size: 0.9rem; /* Ukuran teks lebih kecil */
+    line-height: 1.5;
+    font-weight: bold; /* Menjadikan teks tebal */
+}

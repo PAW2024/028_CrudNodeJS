@@ -1,0 +1,127 @@
+/* CSS Global */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Warna latar belakang halaman */
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-image: url('/images/12.jpg'); /* Ganti dengan URL gambar Anda */
+    background-size: cover; /* Agar gambar menutupi seluruh container */
+    background-position: center; /* Memposisikan gambar di tengah */
+    background-repeat: no-repeat;
+}
+
+/* CSS untuk container utama */
+.index {
+    background: rgba(255, 255, 255, 0.697);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    text-align: center;
+    width: 100%; /* Memastikan container mengisi 100% lebar container induknya */
+    max-width: 1200px; /* Lebar maksimal container */
+    margin-left: auto;
+    margin-right: auto; /* Memastikan container terpusat */
+}
+
+
+/* Styling untuk heading utama */
+h1 {
+    font-size: 36px;
+    color: #333;
+}
+
+/* Styling untuk paragraf */
+p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* CSS untuk container link pilihan */
+.container.mt-4 {
+    margin-top: 40px;
+}
+
+/* CSS untuk row */
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+/* CSS untuk card */
+.card {
+    background-color: rgba(255, 255, 255, 0.721); /* Transparansi untuk card */
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efek hover untuk card */
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Styling untuk card-body */
+.card-body {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Styling untuk card title */
+.card-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Styling untuk card text */
+.card-text {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Styling untuk tombol */
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Warna untuk tombol dengan class 'btn-info' */
+.btn-info {
+    background-color: #17a2b8;
+    color: white;
+}
+
+.btn-info:hover {
+    background-color: #138496;
+}
+
+/* Warna untuk tombol dengan class 'btn-warning' */
+.btn-warning {
+    background-color: #ffc107;
+    color: white;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col-md-6 {
+        width: 100%;
+    }
+}

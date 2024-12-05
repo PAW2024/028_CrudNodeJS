@@ -1,53 +1,75 @@
-<div class="container mt-5">
-    <h1 class="text-center">Todo List</h1>
-
-    <!-- Form to Add New Todo -->
-    <form id="addTodoForm" class="my-4">
-        <div class="input-group">
-            <input type="text" id="newTask" class="form-control" placeholder="Add a new task..." required>
-            <div class="input-group-append">
-                <button type="submit" class="btn btn-primary">Add Task</button>
+<div class="todolist">
+    <div class="index2 mt-5">
+        <h1 class="text-center">Tambah Data Killua</h1>
+    
+        <!-- Button to trigger modal for adding new todo -->
+        <button class="btn btn-primary mb-4" data-bs-toggle="modal" data-bs-target="#addTodoModal">Tambah</button>
+    
+        <!-- Card Layout for Todos -->
+        <div class="row" id="todoList">
+            <% todos.forEach(todo => { %>
+            <div class="col-md-4 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title <%= todo.completed ? 'text-decoration-line-through text-muted' : '' %>">
+                            <%= todo.task %>
+                        </h5>
+                        <div class="d-flex justify-content-end">
+                            <button class="btn btn-sm btn-success me-2 editBtn" data-id="<%= todo.id %>">Edit</button>
+                            <button class="btn btn-sm btn-danger deleteBtn" data-id="<%= todo.id %>">Hapus</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <% }); %>
+        </div>
+    
+        <!-- Modal to Add New Todo -->
+        <div id="addTodoModal" class="modal fade" tabindex="-1" aria-labelledby="addTodoModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="addTodoModalLabel">Tambah Data Killua</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="addTodoForm">
+                            <div class="form-group">
+                                <label for="newTask">Data Killua</label>
+                                <input type="text" id="newTask" class="form-control" placeholder="Add a new task..." required>
+                            </div>
+                            <button type="submit" class="btn btn-primary mt-3">Tambah Data</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
-    </form>
-
-    <!-- List of Todos -->
-    <ul id="todoList" class="list-group">
-        <% todos.forEach(todo=> { %>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-                <span class="<%= todo.completed ? 'completed' : '' %>">
-                    <%= todo.task %>
-                </span>
-                <div>
-                    <button class="btn btn-sm btn-success mr-2 editBtn" data-id="<%= todo.id %>">Edit</button>
-                    <button class="btn btn-sm btn-danger deleteBtn" data-id="<%= todo.id %>">Delete</button>
-                </div>
-            </li>
-            <% }); %>
-    </ul>
-
-    <!-- Edit Todo Modal -->
-    <div id="editModal" class="modal fade" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="editModalLabel">Edit Todo</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="editTodoForm">
-                        <div class="form-group">
-                            <label for="editTask">Task</label>
-                            <input type="text" id="editTask" class="form-control" required>
-                        </div>
-                        <button type="submit" class="btn btn-primary mt-3">Save Changes</button>
-                    </form>
+    
+        <!-- Edit Todo Modal -->
+        <div id="editModal" class="modal fade" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="editModalLabel">Edit Data Killua</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="editTodoForm">
+                            <div class="form-group">
+                                <label for="editTask">Data Killua</label>
+                                <input type="text" id="editTask" class="form-control" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary mt-3">Simpan</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
+
+<!-- JavaScript for functionality -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     $(document).ready(function () {
